@@ -272,6 +272,74 @@ body {
 .contact-links .fa-whatsapp {
     color: #25D366;
 }
+/* ================= LARGE REVIEWS SHOWCASE ================= */
+
+.reviews-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.review-card-large {
+    position: relative;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.review-card-large img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.review-card-large:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.review-card-large:hover img {
+    transform: scale(1.03);
+}
+
+.review-overlay-large {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.review-card-large:hover .review-overlay-large {
+    opacity: 1;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .review-card-large img {
+        max-height: 300px;
+    }
+
+    .review-overlay-large {
+        font-size: 1rem;
+        padding: 14px;
+        opacity: 1; /* Show overlay always on mobile */
+    }
+}
 
 /* ================= FOOTER ================= */
 
