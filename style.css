@@ -128,6 +128,33 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+/* Icon styling */
+.hero-buttons i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.contact-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.contact-links a {
+    font-size: 1.8rem;
+    color: #4da3ff;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.contact-links a:hover {
+    color: #1da1f2;
+    transform: scale(1.2);
+}
+
+/* WhatsApp green */
+.contact-links a .fa-whatsapp {
+    color: #25D366;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
