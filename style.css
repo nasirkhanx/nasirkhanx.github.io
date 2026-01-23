@@ -156,6 +156,22 @@ footer {
     color: #25D366;
 }
 
+.hero-tagline {
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+    color: #d1d5db;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+    .hero-tagline {
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .navbar {
