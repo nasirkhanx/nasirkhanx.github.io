@@ -1,141 +1,138 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background: #f9fafb;
+    background: #f4f6fb;
+    color: #222;
 }
 
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 50px;
-  background: #0f172a;
-  color: white;
-  position: sticky;
-  top: 0;
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #111;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
+.logo {
+    color: #fff;
 }
 
-nav ul li {
-  margin-left: 20px;
+.navbar a {
+    color: #ccc;
+    margin-left: 1.2rem;
+    text-decoration: none;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
+.navbar a:hover {
+    color: #4da3ff;
 }
 
-/* HERO */
+/* Hero */
 .hero {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg,#2563eb,#1e40af);
-  color: white;
-  text-align: center;
-  padding: 20px;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #111, #1f2933);
+    color: #fff;
+    text-align: center;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
+.hero span {
+    color: #4da3ff;
 }
 
 .btn {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: white;
-  color: #2563eb;
-  border-radius: 6px;
-  text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 0.4rem;
+    display: inline-block;
 }
 
-/* PLANS */
-.plans {
-  padding: 60px 10%;
-  text-align: center;
+.primary {
+    background: #4da3ff;
+    color: #fff;
 }
 
-.plan-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
-  margin-top: 40px;
+.secondary {
+    border: 1px solid #4da3ff;
+    color: #4da3ff;
 }
 
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+/* Sections */
+.section {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.popular {
-  border: 2px solid #2563eb;
+.dark {
+    background: #111;
+    color: #fff;
+}
+
+/* Pricing */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.price-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.dark .price-card {
+    background: #1f2933;
 }
 
 .price {
-  font-size: 30px;
-  color: #2563eb;
+    font-size: 1.6rem;
+    margin: 1rem 0;
 }
 
-.card ul {
-  list-style: none;
-  margin: 20px 0;
+.price-card ul {
+    list-style: none;
+    margin-bottom: 1rem;
 }
 
-.card ul li {
-  margin: 8px 0;
+.price-card li {
+    margin: 0.4rem 0;
 }
 
-.card button {
-  padding: 10px;
-  width: 100%;
-  border: none;
-  background: #2563eb;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
+.featured {
+    border: 2px solid #4da3ff;
+    transform: scale(1.05);
 }
 
-/* ABOUT */
-.about {
-  padding: 60px 10%;
-  background: #e5e7eb;
-  text-align: center;
+/* Contact */
+.contact-links a {
+    margin-right: 1rem;
+    color: #4da3ff;
+    text-decoration: none;
 }
 
-/* CONTACT */
-.contact {
-  padding: 60px 10%;
-  text-align: center;
-}
-
-form {
-  max-width: 400px;
-  margin: auto;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-/* FOOTER */
+/* Footer */
 footer {
-  background: #0f172a;
-  color: white;
-  text-align: center;
-  padding: 15px;
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
 }
