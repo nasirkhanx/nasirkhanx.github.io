@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nasir Khan | Web Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,7 +19,9 @@
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
     </nav>
-    <a href="https://wa.me/923450613910" target="_blank" class="btn-nav">Hire Me</a>
+    <div class="nav-cta">
+        <a href="https://wa.me/923450613910" target="_blank" class="btn-nav">Hire Me</a>
+    </div>
 </header>
 
 <!-- ===== HERO ===== -->
@@ -38,7 +40,7 @@
         </h1>
 
         <p class="hero-sub">
-            I'm <strong>Nasir Khan</strong> — a web developer who crafts fast,
+            I'm <strong>Nasir Khan</strong> — a web developer who crafts fast, 
             beautiful sites that turn visitors into paying clients.
         </p>
 
@@ -78,25 +80,25 @@
 </section>
 
 <!-- ===== ABOUT ===== -->
-<section id="about" class="about-section">
-    <div class="about-inner reveal">
-        <div class="badge">About</div>
-        <h2 class="sec-title">Built on craft,<br><em>driven by results.</em></h2>
+<section id="about" class="about-section reveal">
+    <div class="about-inner">
+        <div class="about-badge">About</div>
+        <h2 class="section-title">Built on craft,<br><em>driven by results.</em></h2>
         <div class="about-body">
             <p>
-                I build modern, responsive websites tailored for businesses and individuals
-                who want more than just an online presence — they want growth.
+                I build modern, responsive websites tailored for businesses and individuals 
+                who want more than just an online presence — they want growth. 
             </p>
             <p>
-                My focus is clean design, blazing performance, and real-world usability.
+                My focus is clean design, blazing performance, and real-world usability. 
                 Every line of code I write is intentional.
             </p>
             <div class="skill-pills">
-                <span>HTML &amp; CSS</span>
+                <span>HTML & CSS</span>
                 <span>JavaScript</span>
                 <span>Responsive Design</span>
                 <span>Performance</span>
-                <span>UI / UX</span>
+                <span>UI/UX</span>
                 <span>SEO Basics</span>
             </div>
         </div>
@@ -106,13 +108,13 @@
 <!-- ===== WORK ===== -->
 <section id="work" class="work-section">
     <div class="section-header reveal">
-        <div class="badge">Work</div>
-        <h2 class="sec-title">Recent Endeavours</h2>
-        <p class="sec-sub">Hand-crafted websites, built to perform. Click any to view live.</p>
+        <div class="about-badge">Work</div>
+        <h2 class="section-title">Recent Endeavours</h2>
+        <p class="section-sub">Hand-crafted websites, built to perform. Click to view live.</p>
     </div>
 
     <div class="projects-grid">
-        <a href="https://zenrichliving.com/" target="_blank" class="project-card reveal">
+        <a href="https://zenrichliving.com/" target="_blank" class="project-card reveal" data-index="1">
             <div class="project-img-wrap">
                 <img src="zenrichliving.png" alt="Zenrich Living" loading="lazy">
                 <div class="project-overlay">
@@ -121,11 +123,11 @@
             </div>
             <div class="project-meta">
                 <h3>Zenrich Living</h3>
-                <p>Lifestyle &amp; Wellness Brand</p>
+                <p>Lifestyle & Wellness Brand</p>
             </div>
         </a>
 
-        <a href="https://dunefury.com/" target="_blank" class="project-card reveal">
+        <a href="https://dunefury.com/" target="_blank" class="project-card reveal" data-index="2">
             <div class="project-img-wrap">
                 <img src="dunefurry.png" alt="Dunefury" loading="lazy">
                 <div class="project-overlay">
@@ -134,11 +136,11 @@
             </div>
             <div class="project-meta">
                 <h3>Dunefury</h3>
-                <p>Adventure &amp; Outdoor</p>
+                <p>Adventure & Outdoor</p>
             </div>
         </a>
 
-        <a href="https://halcrow-pakistan.vercel.app/" target="_blank" class="project-card reveal">
+        <a href="https://halcrow-pakistan.vercel.app/" target="_blank" class="project-card reveal" data-index="3">
             <div class="project-img-wrap">
                 <img src="halcrow.png" alt="Halcrow Pakistan" loading="lazy">
                 <div class="project-overlay">
@@ -156,13 +158,15 @@
 <!-- ===== CONTACT ===== -->
 <section id="contact" class="contact-section">
     <div class="contact-inner reveal">
-        <div class="badge">Contact</div>
-        <h2 class="sec-title">Let's build something<br><em>extraordinary.</em></h2>
-        <p class="sec-sub">Have a project in mind? I'd love to hear about it.</p>
+        <div class="about-badge">Contact</div>
+        <h2 class="section-title">Let's build something<br><em>extraordinary.</em></h2>
+        <p class="section-sub">Have a project in mind? I'd love to hear about it.</p>
 
         <div class="contact-actions">
             <a href="https://wa.me/923450613910" target="_blank" class="contact-card magnetic">
-                <div class="contact-icon wa"><i class="fab fa-whatsapp"></i></div>
+                <div class="contact-icon wa">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
                 <div class="contact-text">
                     <strong>WhatsApp</strong>
                     <span>Fastest response</span>
@@ -171,7 +175,9 @@
             </a>
 
             <a href="https://www.linkedin.com/in/hafiz-nasir-mahmood-09162a293" target="_blank" class="contact-card magnetic">
-                <div class="contact-icon li"><i class="fab fa-linkedin-in"></i></div>
+                <div class="contact-icon li">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
                 <div class="contact-text">
                     <strong>LinkedIn</strong>
                     <span>Professional profile</span>
@@ -180,7 +186,9 @@
             </a>
 
             <a href="mailto:your@email.com" class="contact-card magnetic">
-                <div class="contact-icon em"><i class="fas fa-envelope"></i></div>
+                <div class="contact-icon em">
+                    <i class="fas fa-envelope"></i>
+                </div>
                 <div class="contact-text">
                     <strong>Email</strong>
                     <span>For detailed briefs</span>
