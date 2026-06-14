@@ -4,106 +4,204 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasir Khan | Portfolio & Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <title>Nasir Khan | Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="navbar">
-    <h1 class="logo">Nasir.</h1>
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar">
+    <a href="#home" class="logo">Nasir<span>.</span></a>
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
+        <a href="#work">Work</a>
         <a href="#contact">Contact</a>
     </nav>
+    <div class="nav-cta">
+        <a href="https://wa.me/923450613910" target="_blank" class="btn-nav">Hire Me</a>
+    </div>
 </header>
 
+<!-- ===== HERO ===== -->
 <section id="home" class="hero">
-    <div class="hero-content">
-        <h2 class="hero-title">
-            <span class="hero-top">Creating</span>
-            <span class="hero-highlight">Delightful</span>
-            <span class="hero-script">experiences</span>
-            <small>for your <strong>business</strong></small>
-        </h2>
+    <canvas id="hero-canvas"></canvas>
 
-        <h2>Hi, I'm <span>Nasir Khan</span></h2>
-        <p>Web Developer</p>
-        <p class="hero-tagline">
-            Creating Delightful Digital Experiences That Grow Your Business
+    <div class="hero-content">
+        <p class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            Available for freelance projects
+        </p>
+
+        <h1 class="hero-title">
+            <span class="line-top">Websites that</span>
+            <span class="line-accent" id="typed-word">convert.</span>
+        </h1>
+
+        <p class="hero-sub">
+            I'm <strong>Nasir Khan</strong> — a web developer who crafts fast, 
+            beautiful sites that turn visitors into paying clients.
         </p>
 
         <div class="hero-buttons">
-            <a href="https://www.linkedin.com/in/hafiz-nasir-mahmood-09162a293" target="_blank" class="btn primary">
-                <i class="fab fa-linkedin"></i> LinkedIn
+            <a href="#work" class="btn btn-primary magnetic">
+                <span>See My Work</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="https://wa.me/923450613910" target="_blank" class="btn btn-ghost magnetic">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp Me</span>
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <strong>3+</strong>
+                <span>Projects Live</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <strong>100%</strong>
+                <span>Client Satisfaction</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <strong>Fast</strong>
+                <span>Turnaround</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="about-section reveal">
+    <div class="about-inner">
+        <div class="about-badge">About</div>
+        <h2 class="section-title">Built on craft,<br><em>driven by results.</em></h2>
+        <div class="about-body">
+            <p>
+                I build modern, responsive websites tailored for businesses and individuals 
+                who want more than just an online presence — they want growth. 
+            </p>
+            <p>
+                My focus is clean design, blazing performance, and real-world usability. 
+                Every line of code I write is intentional.
+            </p>
+            <div class="skill-pills">
+                <span>HTML & CSS</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+                <span>Performance</span>
+                <span>UI/UX</span>
+                <span>SEO Basics</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WORK ===== -->
+<section id="work" class="work-section">
+    <div class="section-header reveal">
+        <div class="about-badge">Work</div>
+        <h2 class="section-title">Recent Endeavours</h2>
+        <p class="section-sub">Hand-crafted websites, built to perform. Click to view live.</p>
+    </div>
+
+    <div class="projects-grid">
+        <a href="https://zenrichliving.com/" target="_blank" class="project-card reveal" data-index="1">
+            <div class="project-img-wrap">
+                <img src="zenrichliving.png" alt="Zenrich Living" loading="lazy">
+                <div class="project-overlay">
+                    <span class="visit-label">Visit Site <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </div>
+            </div>
+            <div class="project-meta">
+                <h3>Zenrich Living</h3>
+                <p>Lifestyle & Wellness Brand</p>
+            </div>
+        </a>
+
+        <a href="https://dunefury.com/" target="_blank" class="project-card reveal" data-index="2">
+            <div class="project-img-wrap">
+                <img src="dunefurry.png" alt="Dunefury" loading="lazy">
+                <div class="project-overlay">
+                    <span class="visit-label">Visit Site <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </div>
+            </div>
+            <div class="project-meta">
+                <h3>Dunefury</h3>
+                <p>Adventure & Outdoor</p>
+            </div>
+        </a>
+
+        <a href="https://halcrow-pakistan.vercel.app/" target="_blank" class="project-card reveal" data-index="3">
+            <div class="project-img-wrap">
+                <img src="halcrow.png" alt="Halcrow Pakistan" loading="lazy">
+                <div class="project-overlay">
+                    <span class="visit-label">Visit Site <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </div>
+            </div>
+            <div class="project-meta">
+                <h3>Halcrow Pakistan</h3>
+                <p>Engineering Consultancy</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact-section">
+    <div class="contact-inner reveal">
+        <div class="about-badge">Contact</div>
+        <h2 class="section-title">Let's build something<br><em>extraordinary.</em></h2>
+        <p class="section-sub">Have a project in mind? I'd love to hear about it.</p>
+
+        <div class="contact-actions">
+            <a href="https://wa.me/923450613910" target="_blank" class="contact-card magnetic">
+                <div class="contact-icon wa">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-text">
+                    <strong>WhatsApp</strong>
+                    <span>Fastest response</span>
+                </div>
+                <i class="fas fa-arrow-right contact-arrow"></i>
             </a>
 
-            <a href="https://wa.me/923450613910" target="_blank" class="btn secondary">
-                <i class="fab fa-whatsapp"></i> WhatsApp
+            <a href="https://www.linkedin.com/in/hafiz-nasir-mahmood-09162a293" target="_blank" class="contact-card magnetic">
+                <div class="contact-icon li">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="contact-text">
+                    <strong>LinkedIn</strong>
+                    <span>Professional profile</span>
+                </div>
+                <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+
+            <a href="mailto:your@email.com" class="contact-card magnetic">
+                <div class="contact-icon em">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                    <strong>Email</strong>
+                    <span>For detailed briefs</span>
+                </div>
+                <i class="fas fa-arrow-right contact-arrow"></i>
             </a>
         </div>
     </div>
 </section>
 
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        I build modern, responsive websites solutions tailored for businesses
-        and individuals. My focus is clean design, performance, and real-world usability.
-    </p>
-</section>
-
-<section id="reviews" class="section">
-    <h2>Recent Endeavours</h2>
-    <p>Some of the websites I've built recently. Click on any to view live.</p>
-
-    <div class="reviews-showcase">
-        <a href="https://zenrichliving.com/" target="_blank" class="review-card-large">
-            <img src="zenrichliving.png" alt="Zenrich Living">
-            <div class="review-overlay-large">
-                <p>Zenrich Living</p>
-            </div>
-        </a>
-
-        <a href="https://dunefury.com/" target="_blank" class="review-card-large">
-            <img src="dunefurry.png" alt="Dunefury">
-            <div class="review-overlay-large">
-                <p>Dunefury</p>
-            </div>
-        </a>
-
-        <a href="https://halcrow-pakistan.vercel.app/" target="_blank" class="review-card-large">
-            <img src="halcrow.png" alt="Halcrow Pakistan">
-            <div class="review-overlay-large">
-                <p>Halcrow Pakistan</p>
-            </div>
-        </a>
-    </div>
-</section>
-
-<section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Let’s build something together.</p>
-
-    <div class="contact-links">
-        <a href="https://www.linkedin.com/in/hafiz-nasir-mahmood-09162a293" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-
-        <a href="https://wa.me/923450613910" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-
-        <a href="mailto:your@email.com">
-            <i class="fas fa-envelope"></i>
-        </a>
-    </div>
-</section>
-
+<!-- ===== FOOTER ===== -->
 <footer>
-    <p>© 2026 Nasir Khan. All rights reserved.</p>
+    <p>© 2026 <strong>Nasir Khan</strong>. Crafted with care.</p>
 </footer>
 
 <script src="script.js"></script>
