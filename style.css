@@ -194,59 +194,6 @@ body {
     color: #cbd5e1;
 }
 
-/* ================= PRICING ================= */
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-    margin-top: 50px;
-}
-
-.price-card {
-    background: white;
-    padding: 28px;
-    border-radius: 14px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
-    transition: 0.25s ease;
-}
-
-.price-card:hover {
-    transform: translateY(-6px);
-}
-
-.dark .price-card {
-    background: #0f172a;
-    box-shadow: none;
-}
-
-.price-card h3 {
-    font-size: 1.3rem;
-}
-
-.price {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #4da3ff;
-    margin: 12px 0;
-}
-
-.price-card ul {
-    list-style: none;
-    margin: 20px 0;
-}
-
-.price-card li {
-    margin: 8px 0;
-    font-size: 0.95rem;
-}
-
-/* Featured Card */
-
-.featured {
-    border: 2px solid #4da3ff;
-}
 
 /* ================= CONTACT ================= */
 
