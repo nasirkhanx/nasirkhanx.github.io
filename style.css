@@ -273,7 +273,25 @@ img { display: block; width: 100%; }
         background-position: 0% 50%;
     }
 }
+/*----------ring effect----*/
+.hero-image .orbit{
+    position: absolute;
+    inset: -25px;
+    border-radius: 50%;
+    border-top: 2px solid #4da3ff;
+    border-right: 2px solid transparent;
+    animation: spin 8s linear infinite;
+}
 
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/*------------*/
 /* Glow Pulse */
 @keyframes pulseGlow{
     0%{
