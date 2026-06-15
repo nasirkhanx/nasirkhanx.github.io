@@ -143,17 +143,15 @@ img { display: block; width: 100%; }
     transform: translateY(-1px);
 }
 
-/* ===== HERO ===== */
 .hero {
     position: relative;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    background: var(--bg);
-    overflow: hidden;
-    padding: 100px 24px 60px;
-    text-align: center;
+    /* This padding acts as a safety buffer so content never rolls over the absolute scroll hint */
+    padding-bottom: 120px; 
+    box-sizing: border-box;
 }
 
 #hero-canvas {
@@ -454,28 +452,89 @@ img { display: block; width: 100%; }
     background: var(--border);
 }
 
-/* Scroll hint */
 .hero-scroll-hint {
     position: absolute;
-    bottom: 15px;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     color: var(--muted);
     font-size: 0.7rem;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    opacity: 0.55;
+    opacity: 0.7;
+    z-index: 10;
+    pointer-events: none; /* Prevents it from blocking any clicks */
+    
+    /* Sleek infinite fade-and-bounce animation */
+    animation: scrollHintLook 2.5s infinite ease-in-out;
 }
 
+.hero-scroll-hint span {
+    font-weight: 500;
+}
+
+/* The vertical line animation */
 .scroll-line {
     width: 1px;
-    height: 36px;
+    height: 40px;
+    /* Fades out towards the bottom for a modern, premium aesthetic */
     background: linear-gradient(to bottom, var(--muted), transparent);
-    animation: scroll-pulse 2s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+/* A modern scanning dot inside the scroll line */
+.scroll-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to bottom, transparent, #3b82f6, transparent); /* Adjust hex to your accent color */
+    animation: scrollDotMove 2s infinite linear;
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+@keyframes scrollHintLook {
+    0%, 100% {
+        transform: translate(-50%, 0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, 8px);
+        opacity: 0.9;
+    }
+}
+
+@keyframes scrollDotMove {
+    0% { top: -20px; }
+    100% { top: 40px; }
+}
+
+/* ==========================================================================
+   RESPONSIVE FIX FOR MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero {
+        padding-bottom: 60px; /* Reduce extra padding on mobile */
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    /* Pro-tip: On mobile devices, users know instinctively to scroll, 
+       and fixed viewports are tiny. Hiding the indicator on mobile 
+       is a premium UX standard that eliminates layout overlap entirely.
+    */
+    .hero-scroll-hint {
+        display: none;
+    }
 }
 
 @keyframes scroll-pulse {
