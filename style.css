@@ -457,7 +457,7 @@ img { display: block; width: 100%; }
 /* Scroll hint */
 .hero-scroll-hint {
     position: absolute;
-    bottom: 28px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
